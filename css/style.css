@@ -455,6 +455,17 @@
 
 }
 
+/* PROMOCIONES */
+.h1prom{
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+
+
+
+
 @media (max-width: 480px) {
     .grillacontacto {
         display: grid;
