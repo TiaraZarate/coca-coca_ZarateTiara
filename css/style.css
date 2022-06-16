@@ -67,7 +67,7 @@
 }
 
 
-img{
+.conteiner img{
     width: 400px;
     overflow: hidden;
     transition: 2s;
