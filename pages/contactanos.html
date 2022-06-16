@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/5d4cee75b9.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../img/coca-logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>CONTACTO</title>
 </head>
@@ -15,80 +17,112 @@
 <body class="body">
     <div class="grillacontacto">
         <!-- navegacion -->
-        <nav class="nav">
-            <a href="../index.html">
-                <img src="../img/logo.png" alt="logo"></a>
-            <ul class="menu">
-                <li>
-                    <a href="../index.html"> INICIO</a>
-                </li>
-                <li>
-                    <a href="novedades.html">NOVEDADES</a>
-                </li>
-                <li>
-                    <a href="nosotros.html">NOSOTROS</a>
-                </li>
-                <li>
-                    <a href="promociones.html">PROMOCIONES</a>
-                </li>
-                <li>
-                    <a href="contactanos.html">CONTACTANOS</a>
-                </li>
-            </ul>
+        <nav class="navbar  fixed-top" style="background-color: rgb(153, 6, 6);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../img/logo.png" class="text-center" alt="logo" width="250px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Coca-Cola</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./promociones.html">Promociones</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="./marcas.html" id="offcanvasNavbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Marcas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Coca-Cola</a></li>
+                                    <li><a class="dropdown-item" href="#">Coca-Cola Sin azucar</a></li>
+                                    <li><a class="dropdown-item" href="#">Fanta</a></li>
+                                    <li><a class="dropdown-item" href="#">Sprite</a></li>
+                                    <li><a class="dropdown-item" href="#">Topo Chico</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contactanos.html">Contacto</a>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </nav>
         <!-- titulo principal -->
         <header class="headercont">
             <h1>CONTACTO</h1>
         </header>
-        
-            <!-- informacion -->
-            <div class="info">
-                <h3>Mas informacion</h3>
-                <ul>
-                    <li> <i class="fa-solid fa-location-dot"></i>Vedia 4090 - C1430DAK Buenos Aires, Argentina</li>
-                    <li><i class="fa-solid fa-phone"></i> 0800-888-8888</li>
-                    <li><i class="fa-solid fa-envelope"></i>contactoar@coca-cola.com</li>
-                </ul>
-                <p>Envíanos tu duda o sugerencia con los siguientes datos: </p>
-                <ul>
-                    <li><i class="fa-solid fa-angles-right"></i> Nombre y Apellido</li>
-                    <li><i class="fa-solid fa-angles-right"></i>Teléfono</li>
-                    <li><i class="fa-solid fa-angles-right"></i>Dirección</li>
-                    <li><i class="fa-solid fa-angles-right"></i>E-mail</li>
-                </ul>
-            </div>
-            <!-- formulario -->
-            <div class="form">
-                <h2>Envíanos un mensaje</h2>
-                <p>Envíanos tu duda o sugerencia a continuación:</p>
 
-                <form action="#">
-                    <p>
-                        <label> Nombre y Apellido</label>
-                        <input type="text" name="nombre y apellido">
-                    </p>
-                    <p>
-                        <label>E-mail</label>
-                        <input type="email" name="email">
-                    </p>
-                    <p>
-                        <label>Telefono</label>
-                        <input type="tel" name="tel">
-                    </p>
-                    <p>
-                        <label>Direccion</label>
-                        <input type="text" name="direccion">
-                    </p>
-                    <p>
-                        <label> Mensaje</label>
-                        <textarea name="mensaje" rows="3"></textarea>
-                    </p>
-                    <p>
-                        <button type="submit">Enviar</button>
-                    </p>
-                </form>
-            </div>
-        
+        <!-- informacion -->
+        <div class="info">
+            <h3>Mas informacion</h3>
+            <ul>
+                <li> <i class="fa-solid fa-location-dot"></i>Vedia 4090 - C1430DAK Buenos Aires, Argentina</li>
+                <li><i class="fa-solid fa-phone"></i> 0800-888-8888</li>
+                <li><i class="fa-solid fa-envelope"></i>contactoar@coca-cola.com</li>
+            </ul>
+            <p>Envíanos tu duda o sugerencia con los siguientes datos: </p>
+            <ul>
+                <li><i class="fa-solid fa-angles-right"></i> Nombre y Apellido</li>
+                <li><i class="fa-solid fa-angles-right"></i>Teléfono</li>
+                <li><i class="fa-solid fa-angles-right"></i>Dirección</li>
+                <li><i class="fa-solid fa-angles-right"></i>E-mail</li>
+            </ul>
+        </div>
+        <!-- formulario -->
+        <div class="form">
+            <h2>Envíanos un mensaje</h2>
+            <p>Envíanos tu duda o sugerencia a continuación:</p>
+
+            <form action="#">
+                <p>
+                    <label> Nombre y Apellido</label>
+                    <input type="text" name="nombre y apellido">
+                </p>
+                <p>
+                    <label>E-mail</label>
+                    <input type="email" name="email">
+                </p>
+                <p>
+                    <label>Telefono</label>
+                    <input type="tel" name="tel">
+                </p>
+                <p>
+                    <label>Direccion</label>
+                    <input type="text" name="direccion">
+                </p>
+                <p>
+                    <label> Mensaje</label>
+                    <textarea name="mensaje" rows="3"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Enviar</button>
+                </p>
+            </form>
+        </div>
+
         <!-- footer -->
         <footer class="footer">
             <ol>
@@ -106,6 +140,12 @@
 
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

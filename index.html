@@ -1,104 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/5d4cee75b9.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./img/coca-logo.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>COCA-COLA</title>
 </head>
-<body class="body">
-    <div class="grilla">
-        <!-- navegacion -->
-        <nav class="nav">
-            <a href="./index.html">
-                <img src="./img/logo.png" alt="logo" ></a>
-            <ul class="menu">
-                <li>
-                    <a href="./index.html"> INICIO</a>
-                </li>
-                <li>
-                    <a href="pages/novedades.html">NOVEDADES</a>
-                </li>
-                <li>
-                    <a href="pages/nosotros.html">NOSOTROS</a>
-                </li>
-                <li>
-                    <a href="pages/promociones.html">PROMOCIONES</a>
-                </li>
-                <li>
-                    <a href="pages/contactanos.html">CONTACTANOS</a>
-                </li>
-            </ul>
-        </nav>
-       <!-- titulo principal-header -->
-        <header class="header">
-            <h1 class="wow animate_animated animate__fadeInUpBig" >SOMOS COCA-COLA DE ARGENTINA</h1>    
-        </header>
-        <!-- section -->
-        <section class="section">
-            <p>En mayo de 1886, John Pemberton sirvió en Atlanta <b> la primera Coca-Cola.</b>  Desde esa bebida icónica hasta hoy hemos recorrido un largo camino: el que nos llevó a convertirnos en una Compañía Integral de Bebidas. Somos Coca-Cola y mucho más…</p>
-        </section>
-        
-        <section class="texto1">
-            
-            <div>
-                <h3>En 1942</h3>
-                <p>La Compañía abrió su primera planta en Argentina. Desde entonces, el Sistema Coca-Cola -integrado por Coca-Cola y sus socios embotelladores- trabaja con la misma pasión y compromiso.<br>Estamos presentes en el día a día de los bares históricos, de los quioscos de barrio, de las despensas de pueblo y hasta del cocacolero al que llamás en la cancha y en la playa.<br>Gracias a todos ellos, podés disfrutar de nuestras bebidas en cada rincón del país.</p>  
-            </div> 
-            <img src="./img/compañia.jpg" alt="nuestra compañia" >        
-        </section>   
-           
-        <section class="texto2">
-            <img src="./img/marca.jpg" alt="heladera con deferentes marcas de coca-cola">
-            <div>
-                <h3>Nos apasiona trabajar por lo que las personas quieren</h3>
-                <p>Acompañamos cada momento de tu día con casi 80 opciones de bebidas. Desde la tradicional Coca-Cola, pasando por AdeS, Cepita, Powerade y muchas más. De todo nuestro portafolio, el 50% es bajo o sin calorías.</p>    
-            </div>    
-        </section>      
-             
-        <section class="texto3">
-            <h3  >Crecemos de la mano de nuestras comunidades</h3>    
-            <div>
-                <p> Por cada empleo que generamos, ayudamos a crear muchos más en nuestra extensa cadena de valor que incluye, entre otros, agricultores,choferes, operarios, clientes y recicladores.</p>        
-                <img src="./img/coca-cola.jpg" alt="señora con una botella de coca-cola" >        
-            </div>        
-        </section>
-            
-        <section class="texto4">
-            <h3>Creemos que vivir en Un Mundo sin Residuos es posible</h3>
-            <div>
-                <p>Trabajamos a nivel global para cumplir nuestro compromiso de recuperar y reciclar para el 2030 un empaque por cada uno de los que ponemos en el mercado.</p>
-                <img src="./img/reciclaje.jpg" alt="botellas de coca-cola reciclables">
 
-            </div>              
-        </section> 
-        <div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga cum nisi, dolorem fugiat nihil esse.</p>
-        </div>  
+<body class="body">
+    <div>
+        <!-- navegacion -->
+        <nav class="navbar  fixed-top" style="background-color: rgb(153, 6, 6);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../coca-coca_ZarateTiara/img/logo.png" class="text-center" alt="logo" width="250px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Coca-Cola</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/promociones.html">Promociones</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="./pages/marcas.html"
+                                    id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Marcas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Coca-Cola</a></li>
+                                    <li><a class="dropdown-item" href="#">Coca-Cola Sin azucar</a></li>
+                                    <li><a class="dropdown-item" href="#">Fanta</a></li>
+                                    <li><a class="dropdown-item" href="#">Sprite</a></li>
+                                    <li><a class="dropdown-item" href="#">Topo Chico</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/contactanos.html">Contacto</a>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- carousel -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.coca-cola.com.ar/content/dam/one/ar/es/promociones/spritedaddyyankee/banner-inicio-1600x600.jpg"
+                        class="d-block w-100" alt="Daddy Yankee con un anuncio de Sprite">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.coca-cola.com.ar/content/dam/one/ar/es/homepage/brands/Home-Argentina_1440x480-brands.png"
+                        class="d-block w-100" alt="Marcas de Coca-Cola">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.coca-cola.com.ar/content/dam/one/ar/es/homepage/ccth-argentina/Home-argentina_1440x480-CCTH.png"
+                        class="d-block w-100" alt="botellas de coca-cola">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- imagenes -->
+        <section class="conteiner">
+            <section>
+                <a href="./pages/marcas.html">
+                    <img src="https://www.coca-cola.com.ar/content/dam/one/ar/es/homepage/circles/Home-argentina_600x600-News.png"
+                        width="400px" alt="coca-cola">
+                    <p>MARCAS</p>
+                </a>
+            </section>
+            <section>
+                <a href="./pages/nosotros.html">
+                    <img src="https://www.coca-cola.com.ar/content/dam/one/ar/es/homepage/circles/Home-argentina_600x600-work-with-us.png"
+                        alt="coca-cola">
+                    <P>NOSOTROS</P>
+                </a>
+            </section>
+            <section>
+                <a href="./pages/contactanos.html">
+                    <img src="https://www.coca-cola.com.ar/content/dam/one/ar/es/homepage/circles/Home-Argentina_600x600-contact-us.png"
+                        alt="coca-cola">
+                    <p>CONTACTO</p>
+                </a>
+
+
+            </section>
+        </section>
+
         <!-- footer -->
         <footer class="footer">
             <ol>
                 <li>
-                    <a href="https://www.facebook.com/CocaColaCoAr/"><i class="fa-brands fa-facebook"></i></a> 
+                    <a href="https://www.facebook.com/CocaColaCoAr/"><i class="fa-brands fa-facebook"></i></a>
                 </li>
                 <li>
-                     <a href="https://www.instagram.com/cocacolacoar/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/cocacolacoar/"><i class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li>
                     <a href="https://www.youtube.com/user/CocaColaCo"><i class="fa-brands fa-youtube"></i></a>
                 </li>
-            </ol> 
+            </ol>
         </footer>
-        
-    </div>  
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
     <script src="./js/wow.js"></script>
     <script>
         new WOW().init();
     </script>
 </body>
+
 </html>
