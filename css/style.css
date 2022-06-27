@@ -408,7 +408,13 @@
 
 
 /* MEDIA QUERY- mobile last */
-@media (max-width: 480px) {
+
+
+
+
+
+
+@media (min-width: 480px) and (max-width:780px) {
     .grilla {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -421,7 +427,7 @@
             "texto3 texto3 "
             "texto4 texto4 "
             "footer footer ";
-        background-color: coral;
+        
     }
 
     .nav {
@@ -435,7 +441,7 @@
         text-align: center;
         color: white;
         margin: 50px;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .texto1 {
@@ -451,22 +457,25 @@
         flex-direction: column;
         flex-direction: column-reverse;
         margin: 2rem;
+    } 
+
+    .texto3  div {
+        grid-area: texto3;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 20px;
     }
-
-}
-
-/* PROMOCIONES */
-.h1prom{
-    text-align: center;
-    font-size: 2rem;
     
-}
-
-
-
-
-
-@media (max-width: 480px) {
+    .texto4 div{
+        grid-area: texto4;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+    }
+    
+    
+    
     .grillacontacto {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -479,4 +488,79 @@
         align-items: center;
 
     }
+    .conteiner{
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        margin: 35px;
+        position: relative;
+    }
+    .conteiner img{
+        width: 300px;
+        overflow: hidden;
+        transition: 2s;
+        border-radius: 5px;
+        
+    }
+
+    .footer ol {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-content: center;
+        justify-content:center
+    }
+
+    
+}
+
+@media (min-width: 780px) and (max-width:1024) {
+    .grilla {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "nav nav"
+            "header header "
+            "section section "
+            "texto1 texto1 "
+            "texto2 texto2 "
+            "texto3 texto3 "
+            "texto4 texto4 "
+            "footer footer ";
+        
+    }
+    .texto3  div {
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 2rem;
+    }
+    
+    .texto4 div{
+        grid-area: texto4;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+    }
+
+    .conteiner{
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 35px;
+        position: relative;
+    }
+
+
+
+
+
+}
+
+@media (max-width:480p){
+
 }
