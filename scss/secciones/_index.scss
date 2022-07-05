@@ -1,5 +1,5 @@
 .body {
-    background-color: rgb(250, 249, 249);
+    background-color: $colorfondo
     font-family: 'Quicksand', sans-serif;
 
     nav {
@@ -42,7 +42,7 @@
 
 
     .footer {
-        background-color: rgb(87, 4, 4);
+        background-color: $colorfooter;
         display: flex;
         flex-direction: row;
 
