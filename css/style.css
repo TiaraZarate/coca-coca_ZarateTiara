@@ -1,566 +1,339 @@
 * {
-    padding: 0%;
-    margin: 0%;
-}
+  padding: 0%;
+  margin: 0%; }
 
-.grilla {
+@media (max-width: 780px) {
+  .grilla {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "nav nav nav nav"
-        "header header header header"
-        "section section section section"
-        "texto1 texto1 texto1 texto1"
-        "texto2 texto2 texto2 texto2"
-        "texto3 texto3 texto4 texto4"
-        "footer footer footer footer";
-    background-color: white
-}
-
-.body {
-    background-color: rgb(250, 249, 249);
-    font-family: 'Quicksand', sans-serif;
-}
-
-/* NAVEGACION */
-.nav {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav nav" "header header " "section section " "texto1 texto1 " "texto2 texto2 " "texto3 texto3 " "texto4 texto4 " "footer footer "; }
+  .nav {
     grid-area: nav;
     display: flex;
-    flex-direction: row;
-    background-color: rgb(153, 6, 6);
-}
-
-.nav img {
-    max-width: 300px;
-}
-
-.menu {
+    flex-direction: column;
+    background-color: #990606; }
+  .header h1 {
+    text-align: center;
+    color: white;
+    margin: 50px;
+    font-size: 2rem; }
+  .texto1 {
+    grid-area: texto1;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem; }
+  .texto2 {
+    grid-area: texto2;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    margin: 2rem; }
+  .texto3 div {
+    grid-area: texto3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px; }
+  .texto4 div {
+    grid-area: texto4;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem; }
+  .grillacontacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav nav " "headercont headercont " "form form " "info info" "footer footer";
+    align-items: center; }
+  .conteiner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 35px;
+    position: relative; }
+  .conteiner img {
+    width: 300px;
+    overflow: hidden;
+    transition: 2s;
+    border-radius: 5px; }
+  .footer ol {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     align-content: center;
-    justify-content: flex-end;
-}
+    justify-content: center; } }
 
-.menu li {
-    list-style: none;
-    padding: 15px;
-}
+@media (max-width: 1024px) {
+  .grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav nav" "header header " "section section " "texto1 texto1 " "texto2 texto2 " "texto3 texto3 " "texto4 texto4 " "footer footer "; }
+  .texto3 div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2rem; }
+  .texto4 div {
+    grid-area: texto4;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem; }
+  .conteiner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 35px;
+    position: relative;
+    align-items: center; } }
 
-.menu a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu li:hover {
-    background-color: black;
-}
-
-/* INDEX */
-.conteiner{
+.body {
+  background-color: #faf9f9;
+  font-family: 'Quicksand', sans-serif; }
+  .body nav img {
+    max-width: 300px; }
+  .body .conteiner {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 35px;
-    position: relative;
-}
-
-
-.conteiner img{
-    width: 400px;
-    overflow: hidden;
-    transition: 2s;
-    border-radius: 5px;
-    
-}
-
-.conteiner img:hover{
-    transform: scale(1.2);
-
-}
-
-.container p{
+    position: relative; }
+    .body .conteiner img {
+      width: 400px;
+      overflow: hidden;
+      transition: 2s;
+      border-radius: 5px; }
+      .body .conteiner img:hover {
+        transform: scale(1.2); }
+    .body .conteiner p {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .body .footer {
+    background-color: #570404;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 2rem;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-shadow: 0 0 8px rgb(0,0,0,0.8);
-}
-
-
-
-
-
-
-/* NOSOTROS */
-/* header */
-.header {
-    grid-area: header;
-    background-image: url('https://www.coca-cola.com.ar/content/dam/one/ar/es/homepage/diversity-and-inclusion/Home-argentina_760x320-diversity.png');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
-    height: 250px;
-
-}
-
-.header h1 {
-    text-align: center;
-    color: white;
-    margin: 125px;
-    font-size: 3rem;
-    font-family: 'Quicksand', sans-serif;
-
-}
-
-
-/* section */
-.section {
-    grid-area: section;
-    margin-top: 2rem;
-    text-align: center;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 10vh;
-    font-size: 1.5rem;
-}
-
-
-
-/* texto 1 */
-.texto1 {
-    grid-area: texto1;
-    display: flex;
-    flex-direction: row;
-    margin: 2rem;
-
-}
-
-.texto1 div {
-    display: flex;
-    flex-direction: column;
-
-}
-
-
-.texto1 h3 {
-    color: red;
-    text-align: center;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-.texto1 img {
-    max-width: 400px;
-    margin-left: 2rem;
-    margin-right: 4rem;
-}
-
-.texto1 p {
-    margin: 30px;
-    margin-left: 60px;
-    text-align: center;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-}
-
-
-
-/* texto 2 */
-.texto2 {
-    grid-area: texto2;
-    display: flex;
-    flex-direction: row;
-    margin: 2rem;
-}
-
-.texto2 div {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.texto2 h3 {
-    color: red;
-    text-align: center;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    margin-top: 100px;
-}
-
-.texto2 img {
-    max-width: 500px;
-    margin-left: 4rem;
-}
-
-.texto2 p {
-    margin: 30px;
-    margin-left: 60px;
-    text-align: center;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-}
-
-
-/* texto 3 */
-.texto3 {
-    grid-area: texto3;
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-}
-
-.texto3 div {
-    display: flex;
-    flex-direction: row;
-}
-
-.texto3 h3 {
-    color: red;
-    text-align: center;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-}
-
-.texto3 img {
-    max-width: 300px;
-    margin-left: 2rem;
-}
-
-.texto3 p {
-    margin: 30px;
-    margin-left: 60px;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-}
-
-/* texto 4 */
-.texto4 {
-    grid-area: texto4;
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-}
-
-.texto4 div {
-    display: flex;
-    flex-direction: row;
-}
-
-.texto4 h3 {
-    color: red;
-    text-align: center;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-}
-
-.texto4 img {
-    max-height: 300px;
-    margin-left: 2rem;
-}
-
-.texto4 p {
-    margin: 30px;
-    margin-left: 60px;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-}
-
-
-/* footer */
-.footer {
-    grid-area: footer;
-    background-color: rgb(87, 4, 4);
-    display: flex;
-    flex-direction: row;
-
-}
-
-.footer ol {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    align-content: center;
-    justify-content: space-around
-}
-
-.footer li {
-    list-style: none;
-    padding: 15px;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer i {
-    color: white;
-    font-size: 2rem;
-}
-
-.footer i:hover {
-    color: black;
-}
-
-/* CONTACTO */
-.grillacontacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "nav nav nav nav"
-        "headercont headercont headercont headercont"
-        "form form info info"
-        "form form info info"
-        "footer footer footer footer";
-    align-items: center;
-}
+    flex-direction: row; }
+    .body .footer ol {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      align-content: center;
+      justify-content: space-around; }
+    .body .footer li {
+      list-style: none;
+      padding: 15px; }
+    .body .footer a {
+      color: white;
+      text-decoration: none; }
+    .body .footer i {
+      color: white;
+      font-size: 2rem; }
+      .body .footer i:hover {
+        color: black; }
 
 .body {
-    background-color: rgb(250, 249, 249);
-    font-family: 'Quicksand', sans-serif;
-}
+  background-color: #faf9f9;
+  font-family: 'Quicksand', sans-serif; }
 
-/* header de contacto */
-.headercont {
+.grillacontacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "nav nav nav nav" "headercont headercont headercont headercont" "form form info info" "form form info info" "footer footer footer footer";
+  align-items: center; }
+  .grillacontacto .headercont {
     grid-area: headercont;
-    background: linear-gradient(90deg, rgba(227, 9, 9, 1) 35%, rgba(255, 171, 0, 1) 100%);
-}
-
-.headercont h1 {
-    color: white;
-    text-align: center;
-    font-size: 3rem;
-}
-
-/* informacion */
-.info {
+    background: linear-gradient(90deg, #e30909 35%, #ffab00 100%); }
+    .grillacontacto .headercont h1 {
+      color: white;
+      text-align: center;
+      font-size: 3rem; }
+  .grillacontacto .info {
     grid-area: info;
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em;
     background-color: black;
-    color: white;
-}
-
-.info li {
-    list-style: none;
-    padding: 15px;
-    margin: 5px;
-}
-
-.info h3 {
-    font-size: 2rem;
-    text-align: center;
-}
-
-
-/* form */
-.form {
+    color: white; }
+    .grillacontacto .info li {
+      list-style: none;
+      padding: 15px;
+      margin: 5px; }
+    .grillacontacto .info h3 {
+      font-size: 2rem;
+      text-align: center; }
+  .grillacontacto .form {
     grid-area: form;
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
-    padding: 3rem;
-}
+    padding: 3rem; }
+    .grillacontacto .form form {
+      margin: 0;
+      padding: 1rem; }
+      .grillacontacto .form form button {
+        width: 100%;
+        padding: 1em;
+        border: none;
+        background: #B70E21;
+        text-transform: uppercase;
+        outline: 0;
+        color: #fff9f9;
+        border-bottom: 1px solid #d63031;
+        transition: 0.5s; }
+        .grillacontacto .form form button:hover {
+          transform: scale(1.1); }
+      .grillacontacto .form form input,
+      .grillacontacto .form form textarea {
+        width: 100%;
+        padding: .7em;
+        border: none;
+        background: none;
+        outline: 0;
+        color: #020202;
+        border-bottom: 1px solid #d63031; }
 
-.form form {
-    margin: 0;
-    padding: 1rem;
-}
-
-.form form button {
+.footer {
+  background-color: #570404;
+  display: flex;
+  flex-direction: row; }
+  .footer ol {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 1em;
-    border: none;
-    background: #B70E21;
-    ;
-    text-transform: uppercase;
-    outline: 0;
-    color: rgb(255, 249, 249);
-    border-bottom: 1px solid #d63031;
-    transition: 0.5s;
-}
- 
-.form button:hover{
-    transform: scale(1.1);
-}
+    align-content: center;
+    justify-content: space-around; }
+  .footer li {
+    list-style: none;
+    padding: 15px; }
+  .footer a {
+    color: white;
+    text-decoration: none; }
+  .footer i {
+    color: white;
+    font-size: 2rem; }
+    .footer i:hover {
+      color: black; }
 
-.form form input,
-.form form textarea {
-    width: 100%;
-    padding: .7em;
-    border: none;
-    background: none;
-    outline: 0;
-    color: rgb(2, 2, 2);
-    border-bottom: 1px solid #d63031;
-}
-
-
-
-
-/* MEDIA QUERY- mobile last */
-
-
-
-
-
-
-@media (min-width: 480px) and (max-width:780px) {
-    .grilla {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "nav nav"
-            "header header "
-            "section section "
-            "texto1 texto1 "
-            "texto2 texto2 "
-            "texto3 texto3 "
-            "texto4 texto4 "
-            "footer footer ";
-        
-    }
-
-    .nav {
-        grid-area: nav;
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(153, 6, 6);
-    }
-
-    .header h1 {
-        text-align: center;
-        color: white;
-        margin: 50px;
-        font-size: 2rem;
-    }
-
-    .texto1 {
-        grid-area: texto1;
-        display: flex;
-        flex-direction: column;
-        margin: 2rem;
-    }
-
-    .texto2 {
-        grid-area: texto2;
-        display: flex;
-        flex-direction: column;
-        flex-direction: column-reverse;
-        margin: 2rem;
-    } 
-
-    .texto3  div {
-        grid-area: texto3;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 20px;
-    }
-    
-    .texto4 div{
-        grid-area: texto4;
-        display: flex;
-        flex-direction: column;
-        margin: 2rem;
-    }
-    
-    
-    
-    .grillacontacto {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "nav nav "
-            "headercont headercont "
-            "form form "
-            "info info"
-            "footer footer";
-        align-items: center;
-
-    }
-    .conteiner{
-        width: 100%;
-        display: flex;
-        flex-direction:column;
-        justify-content: space-around;
-        margin: 35px;
-        position: relative;
-    }
-    .conteiner img{
-        width: 300px;
-        overflow: hidden;
-        transition: 2s;
-        border-radius: 5px;
-        
-    }
-
-    .footer ol {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        align-content: center;
-        justify-content:center
-    }
-
-    
-}
-
-@media (min-width: 780px) and (max-width:1024) {
-    .grilla {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "nav nav"
-            "header header "
-            "section section "
-            "texto1 texto1 "
-            "texto2 texto2 "
-            "texto3 texto3 "
-            "texto4 texto4 "
-            "footer footer ";
-        
-    }
-    .texto3  div {
-        
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 2rem;
-    }
-    
-    .texto4 div{
-        grid-area: texto4;
-        display: flex;
-        flex-direction: column;
-        margin: 2rem;
-    }
-
-    .conteiner{
-        width: 100%;
-        display: flex;
-        flex-direction:column;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin: 35px;
-        position: relative;
-    }
-
-
-
-
-
-}
-
-@media (max-width:480p){
-
-}
+.grilla {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "nav nav nav nav" "header header header header" "section section section section" "texto1 texto1 texto1 texto1" "texto2 texto2 texto2 texto2" "texto3 texto3 texto4 texto4" "footer footer footer footer";
+  background-color: white; }
+  .grilla .header {
+    grid-area: header;
+    background-image: url("https://www.coca-cola.com.ar/content/dam/one/ar/es/homepage/diversity-and-inclusion/Home-argentina_760x320-diversity.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 250px; }
+    .grilla .header h1 {
+      text-align: center;
+      color: white;
+      margin: 125px;
+      font-size: 3rem;
+      font-family: 'Quicksand', sans-serif; }
+  .grilla .section {
+    grid-area: section;
+    margin-top: 2rem;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 10vh;
+    font-size: 1.5rem; }
+  .grilla .texto1 {
+    grid-area: texto1;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem; }
+    .grilla .texto1 div {
+      display: flex;
+      flex-direction: column; }
+    .grilla .texto1 h3 {
+      color: red;
+      text-align: center;
+      font-size: 2rem;
+      text-transform: uppercase; }
+    .grilla .texto1 img {
+      max-width: 400px;
+      margin-left: 2rem;
+      margin-right: 4rem; }
+    .grilla .texto1 p {
+      margin: 30px;
+      margin-left: 60px;
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'Quicksand', sans-serif; }
+  .grilla .texto2 {
+    grid-area: texto2;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem; }
+    .grilla .texto2 div {
+      display: flex;
+      flex-direction: column; }
+    .grilla .texto2 h3 {
+      color: red;
+      text-align: center;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-top: 100px; }
+    .grilla .texto2 img {
+      max-width: 500px;
+      margin-left: 4rem; }
+    .grilla .texto2 p {
+      margin: 30px;
+      margin-left: 60px;
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'Quicksand', sans-serif; }
+  .grilla .texto3 {
+    grid-area: texto3;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem; }
+    .grilla .texto3 div {
+      display: flex;
+      flex-direction: column; }
+    .grilla .texto3 h3 {
+      color: red;
+      text-align: center;
+      font-size: 1.5rem;
+      text-transform: uppercase; }
+    .grilla .texto3 img {
+      max-width: 400px;
+      margin: auto; }
+    .grilla .texto3 p {
+      margin: 30px;
+      margin-left: 60px;
+      font-size: 1rem;
+      font-family: 'Quicksand', sans-serif; }
+  .grilla .texto4 {
+    grid-area: texto4;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem; }
+    .grilla .texto4 div {
+      display: flex;
+      flex-direction: column; }
+    .grilla .texto4 h3 {
+      color: red;
+      text-align: center;
+      font-size: 1.5rem;
+      text-transform: uppercase; }
+    .grilla .texto4 img {
+      max-height: 300px;
+      margin: auto; }
+    .grilla .texto4 p {
+      margin: 30px;
+      margin-left: 60px;
+      font-size: 1rem;
+      font-family: 'Quicksand', sans-serif; }

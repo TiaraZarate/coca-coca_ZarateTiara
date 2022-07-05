@@ -1,0 +1,172 @@
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "section section section section"
+        "texto1 texto1 texto1 texto1"
+        "texto2 texto2 texto2 texto2"
+        "texto3 texto3 texto4 texto4"
+        "footer footer footer footer";
+    background-color: white;
+
+    .header {
+        grid-area: header;
+        background-image: url('https://www.coca-cola.com.ar/content/dam/one/ar/es/homepage/diversity-and-inclusion/Home-argentina_760x320-diversity.png');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        height: 250px;
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin: 125px;
+            font-size: 3rem;
+            font-family: 'Quicksand', sans-serif;
+
+        }
+
+    }
+
+    .section {
+        grid-area: section;
+        margin-top: 2rem;
+        text-align: center;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 10vh;
+        font-size: 1.5rem;
+    }
+
+    .texto1 {
+        grid-area: texto1;
+        display: flex;
+        flex-direction: row;
+        margin: 2rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        img {
+            max-width: 400px;
+            margin-left: 2rem;
+            margin-right: 4rem;
+        }
+
+        p {
+            margin: 30px;
+            margin-left: 60px;
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+
+    .texto2 {
+        grid-area: texto2;
+        display: flex;
+        flex-direction: row;
+        margin: 2rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-top: 100px;
+        }
+
+        img {
+            max-width: 500px;
+            margin-left: 4rem;
+        }
+
+        p {
+            margin: 30px;
+            margin-left: 60px;
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+
+    .texto3 {
+        grid-area: texto3;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        img {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        p {
+            margin: 30px;
+            margin-left: 60px;
+            font-size: 1rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+
+    .texto4 {
+        grid-area: texto4;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        img {
+            max-height: 300px;
+            margin: auto;
+        }
+
+        p {
+            margin: 30px;
+            margin-left: 60px;
+            font-size: 1rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+}
+
+
